@@ -109,7 +109,12 @@ AFTER INSERT OR UPDATE OR DELETE
 ON pract_functions.sales
 FOR EACH ROW
 EXECUTE PROCEDURE  tf_sales_trigg();
+````
 
-
-
+<img src="pic/test_insert1.JPG" align="center" />
+<img src="pic/test_insert2.JPG" align="center" />
+<img src="pic/test_update1" align="center" />
+<img src="pic/test_update2" align="center" />
+<img src="pic/test_delete1" align="center" />
+<img src="pic/test_delete2" align="center" />
 
