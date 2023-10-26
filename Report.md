@@ -97,6 +97,7 @@ CASE TG_OP
 		END IF;
 END CASE;
 DELETE FROM pract_functions.good_sum_mart WHERE sum_sale <= 0;
+DELETE FROM pract_functions.good_sum_mart WHERE good_name not in ( SELECT distinct good_name FROM pract_functions.goods );
 
 RETURN NULL;
 END;
