@@ -119,6 +119,7 @@ EXECUTE PROCEDURE  tf_sales_trigg();
 
 <img src="pic/test_insert2.JPG" align="center" />
 
+<br>__*Следующий тест, третий, на изменение записи в таблице sales: меняю значение 3-ей строчки со 120 на 100 - это (120-100)х0.5=10, значит в витрине сумма должна уменьшиться на 10. Проверяю, было 67.0, теперь стало 57.0, т.е. уменьшилось на 10:*__
 
 <img src="pic/test_update1.JPG" align="center" />
 <img src="pic/test_update2.JPG" align="center" />
