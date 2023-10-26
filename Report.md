@@ -131,5 +131,7 @@ EXECUTE PROCEDURE  tf_sales_trigg();
 
 <img src="pic/test_delete1.JPG" align="center" />
 
+<br>__*Последний тест, шестой. Удолю в таблице sales строку с sales_id=1, о продаже 10 позиций спичек.*__
+
 <img src="pic/test_delete2.JPG" align="center" />
 
