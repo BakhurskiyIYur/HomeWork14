@@ -15,9 +15,7 @@
 
 <img src="pic/good_sum_mart.JPG" align="center" />
 
-<br>__*Для того, чтобы витрина данных автоматически хранила актуальную информацию по продажам, подготовлен следующий триггер на таблицу sales, который вычисляет при каждой продаже сумму и записывает её в витрину:*__
-
-
+<br>__*Для того, чтобы витрина данных автоматически хранила актуальную информацию по продажам, подготовлен следующий триггер на таблицу sales, который вычисляет при каждой продаже общую сумму и записывает её в витрину:*__
 
 
 ````
@@ -111,10 +109,12 @@ FOR EACH ROW
 EXECUTE PROCEDURE  tf_sales_trigg();
 ````
 
+# Проверяю, как отрабатывает триггер на манипуляции с данными в таблице sales 
+
 <img src="pic/test_insert1.JPG" align="center" />
 <img src="pic/test_insert2.JPG" align="center" />
-<img src="pic/test_update1" align="center" />
-<img src="pic/test_update2" align="center" />
-<img src="pic/test_delete1" align="center" />
-<img src="pic/test_delete2" align="center" />
+<img src="pic/test_update1.JPG" align="center" />
+<img src="pic/test_update2.JPG" align="center" />
+<img src="pic/test_delete1.JPG" align="center" />
+<img src="pic/test_delete2.JPG" align="center" />
 
