@@ -55,7 +55,7 @@ CASE TG_OP
 		FROM pract_functions.goods g 
 		WHERE g.goods_id = NEW.good_id;
 
-		SELECT g.good_name, g.good_price*OLD.sales_qty sum_sale
+		SELECT g.good_name, OLD.sales_qty*g.good_price sum_sale
 		INTO old_good_name ,  old_sum_sale
 		FROM pract_functions.goods g 
 		WHERE g.goods_id = OLD.good_id;
