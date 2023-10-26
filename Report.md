@@ -97,7 +97,6 @@ CASE TG_OP
 		END IF;
 END CASE;
 DELETE FROM pract_functions.good_sum_mart WHERE sum_sale <= 0;
-DELETE FROM pract_functions.good_sum_mart WHERE good_name not in ( SELECT distinct good_name FROM pract_functions.goods );
 
 RETURN NULL;
 END;
@@ -110,10 +109,17 @@ FOR EACH ROW
 EXECUTE PROCEDURE  tf_sales_trigg();
 ````
 
-# Проверяю, как отрабатывает триггер на манипуляции с данными в таблице sales 
+<br>__*Проверяю теперь, как отрабатывает триггер на манипуляции с данными в таблице sales.*__
+
+<br>__*Первый тест, на вставку новой записи в таблицу sales: вставляем пятую строчку - допустим продали 3 коробка спичек - это  3х0.5=1.5, следовательно 65.5+1.5=67.0. Проверяю, в витрине тоже 67.0:*__
 
 <img src="pic/test_insert1.JPG" align="center" />
+
+<br>__*Второй тест, тоже на вставку новой записи в таблицу sales: вставляем шестую строчку - допустим продали 2 автомобиля - это  2х185000000.01=370000000.02, следовательно 185000000.01+370000000.02=555000000.03. Проверяю, в витрине тоже 555000000.03:*__
+
 <img src="pic/test_insert2.JPG" align="center" />
+
+
 <img src="pic/test_update1.JPG" align="center" />
 <img src="pic/test_update2.JPG" align="center" />
 <img src="pic/test_delete1.JPG" align="center" />
